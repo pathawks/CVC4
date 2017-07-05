@@ -145,7 +145,7 @@ matrix:
       before_install:
       - |
         contrib/mac-build
-        brew install swig
+        brew install swig@2
       install: # Duplicated here because osx does not support `cp -T`
       - |
         wget http://sourceforge.net/projects/cxxtest/files/cxxtest/4.3/cxxtest-4.3.tar.gz
