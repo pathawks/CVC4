@@ -152,7 +152,7 @@ matrix:
         tar -xzvf cxxtest-4.3.tar.gz
         cp -vR cxxtest-4.3/ $HOME/cxxtest
       env:
-      - JAVA_HOME=`/Library/Java/JavaVirtualMachines/jdk1.*/Contents/Home`
+      - JAVA_HOME=$(find /Library/Java/JavaVirtualMachines/jdk1.*/Contents/Home -maxdepth 0)
       - TRAVIS_CVC4=yes
       - TRAVIS_CVC4_CHECK_PORTFOLIO=yes
       - TRAVIS_CVC4_CONFIG="debug --enable-language-bindings=java --with-antlr-dir=`pwd`/antlr-3.4"
